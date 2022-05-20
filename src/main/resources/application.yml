@@ -1,0 +1,20 @@
+server:
+  port: 8821
+
+spring:
+  application:
+    name: log-manager
+  datasource:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    url: jdbc:hsqldb:file:db/LogAlerts;DB_CLOSE_DELAY=1000
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    generate-ddl: true      
+
+app:
+  log-manager:
+    alert-threshold-ms: 4
+
